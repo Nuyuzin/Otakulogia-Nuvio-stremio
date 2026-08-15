@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: otakulogia-stremio-addon
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CACHE_TTL_MS
+        value: "300000"
+      - key: PAGE_SIZE
+        value: "100"
